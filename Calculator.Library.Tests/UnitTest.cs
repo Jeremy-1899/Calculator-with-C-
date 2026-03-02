@@ -1,4 +1,4 @@
-﻿namespace projectLibrary.Tests;
+﻿namespace Calculator.Library.Tests;
 
 public class ExceptionTests
 {
@@ -10,7 +10,7 @@ public class ExceptionTests
         string invalidInput = "2.3.4";
 
         // Act & Assert
-        Assert.Throws<FormatException>(() => projectLibrary.LibraryMethods.ParseNumber(invalidInput));
+        Assert.Throws<FormatException>(() => Calculator.Library.LibraryMethods.ParseNumber(invalidInput));
     }
 
     [Fact]
@@ -20,7 +20,7 @@ public class ExceptionTests
         string invalidInput = "abc";
 
         // Act & Assert
-        Assert.Throws<FormatException>(() => projectLibrary.LibraryMethods.ParseNumber(invalidInput));
+        Assert.Throws<FormatException>(() => Calculator.Library.LibraryMethods.ParseNumber(invalidInput));
     }
 
     [Fact]
@@ -30,7 +30,7 @@ public class ExceptionTests
         string invalidInput = "";
 
         // Act & Assert
-        Assert.Throws<FormatException>(() => projectLibrary.LibraryMethods.ParseNumber(invalidInput));
+        Assert.Throws<FormatException>(() => Calculator.Library.LibraryMethods.ParseNumber(invalidInput));
     }
 
     [Fact]
@@ -40,7 +40,7 @@ public class ExceptionTests
         string invalidInput = "!@#$";
 
         // Act & Assert
-        Assert.Throws<FormatException>(() => projectLibrary.LibraryMethods.ParseNumber(invalidInput));
+        Assert.Throws<FormatException>(() => Calculator.Library.LibraryMethods.ParseNumber(invalidInput));
     }
 
     // Division by Zero Tests
@@ -51,7 +51,7 @@ public class ExceptionTests
         string[] parts = { "10", "/", "0" };
 
         // Act & Assert
-        Assert.Throws<DivideByZeroException>(() => projectLibrary.LibraryMethods.PrioOp(parts));
+        Assert.Throws<DivideByZeroException>(() => Calculator.Library.LibraryMethods.PrioOp(parts));
     }
 
     [Fact]
@@ -61,7 +61,7 @@ public class ExceptionTests
         string[] parts = { "5", "*", "0", "/", "0" };
 
         // Act & Assert
-        Assert.Throws<DivideByZeroException>(() => projectLibrary.LibraryMethods.PrioOp(parts));
+        Assert.Throws<DivideByZeroException>(() => Calculator.Library.LibraryMethods.PrioOp(parts));
     }
 
     // Tokenize Exception Tests
@@ -72,7 +72,7 @@ public class ExceptionTests
         string? nullInput = null;
 
         // Act & Assert
-        Assert.Throws<NullReferenceException>(() => projectLibrary.LibraryMethods.Tokenize(nullInput!));
+        Assert.Throws<NullReferenceException>(() => Calculator.Library.LibraryMethods.Tokenize(nullInput!));
     }
 
     // PrioOp with Invalid Input
@@ -83,7 +83,7 @@ public class ExceptionTests
         string[] parts = { "10", "*", "abc" };
 
         // Act & Assert
-        Assert.Throws<FormatException>(() => projectLibrary.LibraryMethods.PrioOp(parts));
+        Assert.Throws<FormatException>(() => Calculator.Library.LibraryMethods.PrioOp(parts));
     }
 
     [Fact]
@@ -93,6 +93,6 @@ public class ExceptionTests
         string[] parts = { "*" };
 
         // Act & Assert
-        Assert.Throws<IndexOutOfRangeException>(() => projectLibrary.LibraryMethods.PrioOp(parts));
+        Assert.Throws<IndexOutOfRangeException>(() => Calculator.Library.LibraryMethods.PrioOp(parts));
     }
 }

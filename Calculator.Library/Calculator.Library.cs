@@ -1,8 +1,7 @@
-﻿namespace projectLibrary;
+﻿namespace Calculator.Library;
 
 using System.Text.RegularExpressions;
 using System.Globalization;
-using System.Reflection;
 
 public class LibraryMethods
 {

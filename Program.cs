@@ -1,4 +1,4 @@
-﻿using projectLibrary;
+﻿using Calculator.Library;
 
 class Program
 {

@@ -9,8 +9,8 @@
 
   <ItemGroup>
     <!-- Diese beiden Ordner NICHT als Teil von calculator kompilieren -->
-    <Compile Remove="projectLibrary\**\*.cs" />
-    <Compile Remove="projectLibrary.Tests\**\*.cs" />
+    <Compile Remove="Calculator.Library\**\*.cs" />
+    <Compile Remove="Calculator.Library.Tests\**\*.cs" />
 
     <!-- Sicherheit: niemals generierte Dateien kompilieren -->
     <Compile Remove="**\obj\**\*.cs" />
@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="projectLibrary\projectLibrary.csproj" />
+    <ProjectReference Include="Calculator.Library\Calculator.Library.csproj" />
   </ItemGroup>
 
 </Project>
